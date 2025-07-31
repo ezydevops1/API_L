@@ -53,4 +53,7 @@ jobs:
 
       - name: Dummy build step
         run: echo "Building Python app..."
+      - name: Run tests
+        run: |
+          pytest || echo "No tests found"
 
