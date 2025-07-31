@@ -35,7 +35,6 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install -r requirements.txt
           pip install pytest
 
       - name: Run tests
@@ -47,5 +46,11 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.12.3'
+
       - name: Dummy build step
         run: echo "Building Python app..."
+
