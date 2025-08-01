@@ -1,0 +1,17 @@
+name: CD.yml
+
+on:
+  push:
+    branches:
+    
+      - qa
+
+jobs:
+  
+ 
+  deploy-qa:
+    if: github.ref == 'refs/heads/qa'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to QA
+        run: echo "Deploying to QA Environment"
