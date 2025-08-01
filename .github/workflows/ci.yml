@@ -4,6 +4,9 @@ on:
   pull_request:
     branches:
       - main
+      - dev
+      - qa
+      - prod
 jobs:
   lint:
     runs-on: ubuntu-latest
