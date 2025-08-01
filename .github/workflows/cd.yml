@@ -3,12 +3,15 @@ name: CD.yml
 on:
   push:
     branches:
-      - prod
+    
+      - qa
 
 jobs:
-  deploy-prod:
-    if: github.ref == 'refs/heads/prod'
+  
+ 
+  deploy-qa:
+    if: github.ref == 'refs/heads/qa'
     runs-on: ubuntu-latest
     steps:
-      - name: Deploy to Production
-        run: echo "Deploying to Production Environment"
+      - name: Deploy to QA
+        run: echo "Deploying to QA Environment"
