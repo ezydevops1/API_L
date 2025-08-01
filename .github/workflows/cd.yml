@@ -1,0 +1,15 @@
+name: CD.yml
+
+on:
+  push:
+    branches:
+      - dev
+
+jobs:
+  deploy-dev:
+    if: github.ref == 'refs/heads/dev'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to Development
+        run: echo "Deploying to Dev Environment"
+
